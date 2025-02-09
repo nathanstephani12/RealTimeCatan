@@ -1,0 +1,42 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.env/
+*.venv/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+pip-wheel-metadata/
+
+# IDE / Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Logs and cache
+*.log
+*.cache/
+*.pytest_cache/
+
+# Database and environment files
+*.sqlite3
+.env
+*.env
+
+# Docker and cloud files
+*.dockerenv
+docker-compose.override.yml
+
+# Miscellaneous
+.DS_Store
+Thumbs.db
