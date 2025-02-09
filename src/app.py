@@ -1,4 +1,5 @@
 import random
+import time
 
 def GetPlayerCount() -> int:
     num_players = -1
@@ -22,12 +23,19 @@ def GetCountdownInterval() -> int:
 def Roll() -> int:
     return random.randint(1, 6) + random.randint(1, 6)
     
+def Countdown(a_interval):
+    while a_interval:
+        print(f'{a_interval}')
+        time.sleep(1)
+        a_interval -= 1
+    print(f'Next roll: {Roll()}')
+
 
 def main():
     num_players = GetPlayerCount()
     players = GetPlayers(num_players)
     countdown_interval = GetCountdownInterval()
-    
+    Countdown(countdown_interval)
     print('RealTimeCatan')
     
 
