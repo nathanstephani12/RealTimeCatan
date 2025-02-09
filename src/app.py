@@ -24,18 +24,33 @@ def Roll() -> int:
     return random.randint(1, 6) + random.randint(1, 6)
     
 def Countdown(a_interval):
+    print('Starting countdown!')
     while a_interval:
         print(f'{a_interval}')
         time.sleep(1)
         a_interval -= 1
-    print(f'Next roll: {Roll()}')
+
+def HandleSeven(a_players):
+    robber = random.choice(a_players)
+    print(f'{robber} is the robber!')
+    time.sleep(1)
+
+def PlayGame(a_players, a_interval):
+    print('Begin the game!')
+    while(True):
+        Countdown(a_interval)
+        roll = Roll()
+        print(f'Next roll: {roll}')
+        if(roll == 7): 
+            HandleSeven(a_players)
+        time.sleep(1)
 
 
 def main():
     num_players = GetPlayerCount()
     players = GetPlayers(num_players)
     countdown_interval = GetCountdownInterval()
-    Countdown(countdown_interval)
+    PlayGame(players, countdown_interval)
     print('RealTimeCatan')
     
 
