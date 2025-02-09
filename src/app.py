@@ -36,7 +36,9 @@ def HandleSeven(a_players):
     time.sleep(1)
 
 def PlayGame(a_players, a_interval):
-    print('Begin the game!')
+    input('Press Enter to begin the game!')
+    print(f'First roll: {Roll()}')
+
     while(True):
         Countdown(a_interval)
         roll = Roll()
@@ -50,9 +52,7 @@ def main():
     num_players = GetPlayerCount()
     players = GetPlayers(num_players)
     countdown_interval = GetCountdownInterval()
-    PlayGame(players, countdown_interval)
-    print('RealTimeCatan')
-    
+    PlayGame(players, countdown_interval)    
 
 if __name__ == '__main__':
     main()
