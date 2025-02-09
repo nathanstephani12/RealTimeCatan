@@ -4,12 +4,16 @@ def GetPlayerCount() -> int:
         num_players = int(input('Input number of players (3 or 4):\n'))
     return num_players
 
-def main():
-    num_players = GetPlayerCount()
+def GetPlayers(a_num_players):
     players = []
-    for i in range(num_players):
+    for i in range(a_num_players):
         player = input(f'Enter name of player {i + 1}: ')
         players.append(player)
+    return players
+
+def main():
+    num_players = GetPlayerCount()
+    players = GetPlayers(num_players)
     print('RealTimeCatan')
     
 
